@@ -3,7 +3,7 @@
  * 
  * 
  * @authors Rima Ali (2005617),  Wajd Bandar Alharbi (2007057)
- * Arwa Mohammed Kulib (2019574), Ghaida Ahmed Aleryani  (1906952) A
+ * Arwa Mohammed Kulib (2019574), Ghaida Ahmed Aleryani  (1906952)
  * King Abdulaziz university - FCIT - CS department - CPCS361 project - Part#1
  */
 

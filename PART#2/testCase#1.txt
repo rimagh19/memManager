@@ -1,0 +1,7 @@
+NUM = 33800
+address [pageNum=33800, frameNum=-1, offset=12, signedNUm=0, LogicalAddress=42252, physicalAddress=-244]
+
+address [pageNum=33800, frameNum=-1, offset=216, signedNUm=0, LogicalAddress=58584, physicalAddress=-40]
+
+address [pageNum=33800, frameNum=61, offset=104, signedNUm=0, LogicalAddress=59240, physicalAddress=15720]
+

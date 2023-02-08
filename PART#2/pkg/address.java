@@ -1,4 +1,4 @@
-
+import java.util.Comparator;
 
 public class address {
     private int pageNum;
@@ -6,18 +6,20 @@ public class address {
     private int signedNUm;
     private int LogicalAddress;
     private int physicalAddress;
+    private int offset;
 
-    public address(int pageNum, int frameNum, int signedNUm, int logicalAddress, int physicalAddress) {
+    public address(int pageNum, int frameNum, int offset, int signedNUm, int logicalAddress, int physicalAddress) {
         this.pageNum = pageNum;
         this.frameNum = frameNum;
         this.signedNUm = signedNUm;
         LogicalAddress = logicalAddress;
         this.physicalAddress = physicalAddress;
+        this.offset=offset;
     }
 
     @Override
     public String toString() {
-        return "address [pageNum=" + pageNum + ", frameNum=" + frameNum + ", signedNUm=" + signedNUm
+        return "address [pageNum=" + pageNum + ", frameNum=" + frameNum + ", offset=" + offset + ", signedNUm=" + signedNUm
                 + ", LogicalAddress=" + LogicalAddress + ", physicalAddress=" + physicalAddress + "]\n";
     }
 
@@ -40,5 +42,7 @@ public class address {
     public int getPhysicalAddress() {
         return physicalAddress;
     }
+
+
 
 }

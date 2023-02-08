@@ -1,79 +1,161 @@
+NUM = 218
 address [pageNum=39936, frameNum=-1, offset=0, signedNUm=0, LogicalAddress=48128, physicalAddress=-256]
+
 address [pageNum=32768, frameNum=-1, offset=1, signedNUm=0, LogicalAddress=57857, physicalAddress=-255]
+
 address [pageNum=33794, frameNum=-1, offset=2, signedNUm=57, LogicalAddress=58882, physicalAddress=-254]
+
 address [pageNum=33800, frameNum=-1, offset=12, signedNUm=0, LogicalAddress=42252, physicalAddress=-244]
+
 address [pageNum=0, frameNum=-1, offset=20, signedNUm=0, LogicalAddress=16916, physicalAddress=-236]
+
 address [pageNum=35842, frameNum=-1, offset=22, signedNUm=35, LogicalAddress=36374, physicalAddress=-234]
+
 address [pageNum=37898, frameNum=-1, offset=26, signedNUm=61, LogicalAddress=63258, physicalAddress=-230]
+
 address [pageNum=32778, frameNum=-1, offset=43, signedNUm=10, LogicalAddress=41003, physicalAddress=-213]
+
 address [pageNum=39946, frameNum=-1, offset=47, signedNUm=75, LogicalAddress=64815, physicalAddress=-209]
+
 address [pageNum=7178, frameNum=-1, offset=59, signedNUm=-114, LogicalAddress=32315, physicalAddress=-197]
+
 address [pageNum=3082, frameNum=-1, offset=62, signedNUm=27, LogicalAddress=27966, physicalAddress=-194]
+
 address [pageNum=4106, frameNum=-1, offset=63, signedNUm=-49, LogicalAddress=21311, physicalAddress=-193]
+
 address [pageNum=2058, frameNum=-1, offset=90, signedNUm=10, LogicalAddress=10842, physicalAddress=-166]
+
 address [pageNum=33794, frameNum=-1, offset=102, signedNUm=57, LogicalAddress=58982, physicalAddress=-154]
+
 address [pageNum=34816, frameNum=-1, offset=113, signedNUm=0, LogicalAddress=43121, physicalAddress=-143]
+
 address [pageNum=4106, frameNum=-1, offset=139, signedNUm=-30, LogicalAddress=5003, physicalAddress=-117]
+
 address [pageNum=6152, frameNum=-1, offset=140, signedNUm=0, LogicalAddress=6796, physicalAddress=-116]
+
 address [pageNum=7176, frameNum=-1, offset=141, signedNUm=0, LogicalAddress=15757, physicalAddress=-115]
+
 address [pageNum=32778, frameNum=-1, offset=142, signedNUm=48, LogicalAddress=49294, physicalAddress=-114]
+
 address [pageNum=2056, frameNum=-1, offset=152, signedNUm=0, LogicalAddress=10392, physicalAddress=-104]
+
 address [pageNum=35850, frameNum=-1, offset=154, signedNUm=43, LogicalAddress=44954, physicalAddress=-102]
+
 address [pageNum=32778, frameNum=-1, offset=158, signedNUm=40, LogicalAddress=41118, physicalAddress=-98]
+
 address [pageNum=6144, frameNum=-1, offset=161, signedNUm=0, LogicalAddress=31649, physicalAddress=-95]
+
 address [pageNum=35840, frameNum=-1, offset=177, signedNUm=0, LogicalAddress=36529, physicalAddress=-79]
+
 address [pageNum=0, frameNum=-1, offset=180, signedNUm=0, LogicalAddress=692, physicalAddress=-76]
+
 address [pageNum=39946, frameNum=-1, offset=187, signedNUm=-18, LogicalAddress=40891, physicalAddress=-69]
+
 address [pageNum=38914, frameNum=-1, offset=198, signedNUm=62, LogicalAddress=64454, physicalAddress=-58]
+
 address [pageNum=33800, frameNum=-1, offset=216, signedNUm=0, LogicalAddress=58584, physicalAddress=-40]
+
 address [pageNum=6152, frameNum=-1, offset=221, signedNUm=0, LogicalAddress=14557, physicalAddress=-35]
+
 address [pageNum=39946, frameNum=-1, offset=235, signedNUm=58, LogicalAddress=64747, physicalAddress=-21]
+
 address [pageNum=5122, frameNum=-1, offset=242, signedNUm=21, LogicalAddress=22514, physicalAddress=-14]
+
 address [pageNum=2058, frameNum=-1, offset=251, signedNUm=-2, LogicalAddress=3067, physicalAddress=-5]
+
 address [pageNum=32768, frameNum=2, offset=97, signedNUm=0, LogicalAddress=32865, physicalAddress=609]
+
 address [pageNum=6146, frameNum=14, offset=71, signedNUm=-111, LogicalAddress=6727, physicalAddress=3655]
+
 address [pageNum=34818, frameNum=14, offset=182, signedNUm=58, LogicalAddress=60086, physicalAddress=3766]
+
 address [pageNum=6144, frameNum=18, offset=164, signedNUm=0, LogicalAddress=6308, physicalAddress=4772]
+
 address [pageNum=39944, frameNum=21, offset=249, signedNUm=0, LogicalAddress=40185, physicalAddress=5625]
+
 address [pageNum=38914, frameNum=26, offset=243, signedNUm=-68, LogicalAddress=64243, physicalAddress=6899]
+
 address [pageNum=7178, frameNum=56, offset=142, signedNUm=23, LogicalAddress=24462, physicalAddress=14478]
+
 address [pageNum=33800, frameNum=61, offset=104, signedNUm=0, LogicalAddress=59240, physicalAddress=15720]
+
 address [pageNum=32778, frameNum=67, offset=126, signedNUm=56, LogicalAddress=57982, physicalAddress=17278]
+
 address [pageNum=1024, frameNum=86, offset=1, signedNUm=0, LogicalAddress=17665, physicalAddress=22017]
+
 address [pageNum=37896, frameNum=87, offset=29, signedNUm=0, LogicalAddress=62493, physicalAddress=22301]
+
 address [pageNum=3074, frameNum=96, offset=35, signedNUm=-56, LogicalAddress=20259, physicalAddress=24611]
+
 address [pageNum=4098, frameNum=113, offset=147, signedNUm=-28, LogicalAddress=21395, physicalAddress=29075]
+
 address [pageNum=3080, frameNum=121, offset=200, signedNUm=0, LogicalAddress=3784, physicalAddress=31176]
+
 address [pageNum=6152, frameNum=121, offset=232, signedNUm=0, LogicalAddress=22760, physicalAddress=31208]
+
 address [pageNum=8, frameNum=122, offset=201, signedNUm=0, LogicalAddress=969, physicalAddress=31433]
+
 address [pageNum=7176, frameNum=128, offset=29, signedNUm=0, LogicalAddress=32541, physicalAddress=32797]
+
 address [pageNum=35850, frameNum=131, offset=78, signedNUm=59, LogicalAddress=61006, physicalAddress=33614]
+
 address [pageNum=34816, frameNum=137, offset=20, signedNUm=0, LogicalAddress=51476, physicalAddress=35092]
+
 address [pageNum=32776, frameNum=137, offset=125, signedNUm=0, LogicalAddress=33405, physicalAddress=35197]
+
 address [pageNum=35842, frameNum=140, offset=226, signedNUm=43, LogicalAddress=44770, physicalAddress=36066]
+
 address [pageNum=1026, frameNum=141, offset=119, signedNUm=-35, LogicalAddress=18295, physicalAddress=36215]
+
 address [pageNum=2058, frameNum=157, offset=158, signedNUm=18, LogicalAddress=19358, physicalAddress=40350]
+
 address [pageNum=33802, frameNum=157, offset=186, signedNUm=57, LogicalAddress=58554, physicalAddress=40378]
+
 address [pageNum=39936, frameNum=163, offset=81, signedNUm=0, LogicalAddress=56657, physicalAddress=41809]
+
 address [pageNum=37888, frameNum=177, offset=1, signedNUm=0, LogicalAddress=55041, physicalAddress=45313]
+
 address [pageNum=4096, frameNum=179, offset=36, signedNUm=0, LogicalAddress=28964, physicalAddress=45860]
+
 address [pageNum=37890, frameNum=180, offset=151, signedNUm=37, LogicalAddress=62615, physicalAddress=46231]
+
 address [pageNum=33794, frameNum=188, offset=51, signedNUm=12, LogicalAddress=50227, physicalAddress=48179]
+
 address [pageNum=35840, frameNum=188, offset=229, signedNUm=0, LogicalAddress=60645, physicalAddress=48357]
+
 address [pageNum=36866, frameNum=193, offset=179, signedNUm=108, LogicalAddress=53683, physicalAddress=49587]
+
 address [pageNum=39946, frameNum=195, offset=15, signedNUm=67, LogicalAddress=48399, physicalAddress=49935]
+
 address [pageNum=2048, frameNum=196, offset=52, signedNUm=0, LogicalAddress=27444, physicalAddress=50228]
+
 address [pageNum=36872, frameNum=202, offset=120, signedNUm=0, LogicalAddress=45688, physicalAddress=51832]
+
 address [pageNum=37898, frameNum=203, offset=110, signedNUm=53, LogicalAddress=54894, physicalAddress=52078]
+
 address [pageNum=5130, frameNum=205, offset=203, signedNUm=-14, LogicalAddress=6091, physicalAddress=52683]
+
 address [pageNum=5120, frameNum=206, offset=241, signedNUm=0, LogicalAddress=30705, physicalAddress=52977]
+
 address [pageNum=3082, frameNum=207, offset=186, signedNUm=11, LogicalAddress=12218, physicalAddress=53178]
+
 address [pageNum=7170, frameNum=214, offset=167, signedNUm=105, LogicalAddress=7591, physicalAddress=54951]
+
 address [pageNum=5128, frameNum=215, offset=9, signedNUm=0, LogicalAddress=5129, physicalAddress=55049]
+
 address [pageNum=5122, frameNum=218, offset=246, signedNUm=29, LogicalAddress=30198, physicalAddress=56054]
+
 address [pageNum=39938, frameNum=223, offset=242, signedNUm=39, LogicalAddress=40178, physicalAddress=57330]
+
 address [pageNum=4104, frameNum=225, offset=109, signedNUm=0, LogicalAddress=28781, physicalAddress=57709]
+
 address [pageNum=38912, frameNum=241, offset=17, signedNUm=0, LogicalAddress=38929, physicalAddress=61713]
+
 address [pageNum=34816, frameNum=249, offset=245, signedNUm=0, LogicalAddress=43765, physicalAddress=63989]
+
 address [pageNum=4106, frameNum=251, offset=46, signedNUm=28, LogicalAddress=28718, physicalAddress=64302]
+
 address [pageNum=2056, frameNum=252, offset=201, signedNUm=0, LogicalAddress=18633, physicalAddress=64713]
+
+address [pageNum=2058, frameNum=254, offset=11, signedNUm=66, LogicalAddress=2315, physicalAddress=65035]
+

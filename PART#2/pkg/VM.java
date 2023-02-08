@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * @todo Page fault
+ * @todo addresses strings length
+ * @todo Test Cases
  */
 
 import java.util.*;
@@ -13,7 +13,7 @@ import java.io.*;
  */
 public class VM {
     // 2 ^ 8 entries in the page table
-    public static final int PAGE_TABLE_ENTRIES = 256;
+    public static final int PAGE_TABLE_ENTRIES = 255;
     // Page size of 2 ^ 8 bytes
     public static final int PAGE_SIZE = 256;
     // frame size of 2 ^ 8 bytes
@@ -39,20 +39,24 @@ public class VM {
     public static File LaddressFile = new File("../input/Laddress.txt");
     public static File signedNumbersFile = new File("../input/signedNumbers.txt");
     public static File output = new File("../output.txt");
+    public static File testCase1 = new File("../testCase#1.txt");
+    public static File testCase2 = new File("../testCase#2.txt");
 
-    public static ArrayList<address> pageTable = new ArrayList<address>();
+    public static ArrayList<address> physicalMem = new ArrayList<address>();
+    public static int[][] pageTable = new int[255][2]; // ====
+    public static int i = 0;
 
     // private static PrintWriter writer = new PrintWriter(LaddressFile);
 
     public static void main(String[] args) throws Exception {
-
+        fillpagetable();
         try (
                 Scanner scanner = new Scanner(LaddressFile);
                 Scanner scanner2 = new Scanner(signedNumbersFile);
 
         ) {
 
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 80; i++) {
 
                 // 1- read num
                 LogicalAddress = scanner.nextInt();
@@ -61,7 +65,6 @@ public class VM {
                 // 2- conver to binery
                 LogicalAddress = Integer.parseInt(convertIntToBinary(LogicalAddress), 2);
 
-                System.out.println(LogicalAddress);
                 // 3- extract page num
                 pageNum = getPage(LogicalAddress);
 
@@ -69,14 +72,15 @@ public class VM {
                 offset = getOffset(LogicalAddress);
 
                 // 5- test page number
-                pgaeNumberExists = testPageNumber(pageNum);
 
                 // ---------------------------- @todo if exists in table
 
                 // 6- generate frame number
-                if (!pgaeNumberExists) {
+                if (!testPageNumber()) {
                     // ---------------------------- @todo check frame nuumber
                     randomFramenum();
+                } else {
+                    getFrameNumber();
                 }
                 // 7- generate physical address
                 generatePhysicalAddress();
@@ -91,30 +95,89 @@ public class VM {
                 }
 
                 // 9- add to page table
-                pageTable.add(new address(pageNum, frameNum, signedNUm, LogicalAddress, physicalAddress));
+                pageTable[i][0] = pageNum;
+                pageTable[i][1] = frameNum;
+                physicalMem.add(new address(pageNum, frameNum, offset, signedNUm, LogicalAddress, physicalAddress));
 
             }
-
+            physicalMem.sort(new addressComparator());
             printReport();
+            testCase_samePageNumber();
+            test_diffPage();
+            calcFaultRate(); // ===========================
+            displayFaultRate(); // ===========================
+
         }
 
     }
 
+    private static void testCase_samePageNumber() throws Exception {
+
+        int randomPageNumber = 33800;
+
+        try (PrintWriter out = new PrintWriter(testCase1)) {
+            out.println("NUM = " + randomPageNumber);
+            for (int i = 0; i < physicalMem.size(); i++) {
+                if (physicalMem.get(i).getPageNum() == randomPageNumber) {
+                    out.println(physicalMem.get(i).toString());
+                }
+            }
+        }
+
+    }
+
+    private static int getFrameNumber() {
+        for (int i = 0; i < pageTable.length; i++) {
+            if (pageTable[i][0] == pageNum) {
+                return pageTable[i][1];
+            }
+        }
+        return -1;
+
+    }
+
+    private static void test_diffPage() throws FileNotFoundException {
+        int randomPageNumb = (int) (Math.random() * 255);
+
+        try (PrintWriter out = new PrintWriter(testCase2)) {
+            out.println("NUM = " + randomPageNumb);
+            for (int i = 0; i < physicalMem.size(); i++) {
+                if (physicalMem.get(i).getPageNum() != randomPageNumb) {
+                    out.println(physicalMem.get(i).toString());
+                }
+            }
+        }
+
+    }
+
+    public static void fillpagetable() {
+        for (int i = 0; i < pageTable.length - 1; i++) {
+            pageTable[i][1] = -1;
+        }
+    }
+
+    private static void displayFaultRate() {
+    }
+
+    private static void calcFaultRate() {
+    }
+
     private static void printReport() throws Exception {
         try (PrintWriter writer = new PrintWriter(output)) {
-            for (int i = 0; i < pageTable.size() - 1; i++) {
-                writer.print(pageTable.get(i).toString());
+            for (int i = 0; i < physicalMem.size() - 1; i++) {
+                writer.print(physicalMem.get(i).toString());
             }
         }
 
     }
 
     private static boolean testPhysicalAddress() {
-        for (int i = 0; i < pageTable.size() - 1; i++) {
-            if (pageTable.get(i).getPhysicalAddress() == physicalAddress) {
+        for (int i = 0; i < physicalMem.size() - 1; i++) {
+            if (physicalMem.get(i).getPhysicalAddress() == physicalAddress) {
                 return true;
             }
         }
+        i++;
         return false;
 
     }
@@ -124,9 +187,9 @@ public class VM {
 
     }
 
-    private static boolean testPageNumber(int pageNumber) {
-        for (int i = 0; i < pageTable.size() - 1; i++) {
-            if (pageTable.get(i).getPageNum() == pageNumber) {
+    private static boolean testPageNumber() {
+        for (int i = 0; i < pageTable.length - 1; i++) {
+            if (pageTable[i][0] == pageNum) {
                 return true;
             }
         }
@@ -150,15 +213,16 @@ public class VM {
     }
 
     public static int getPage(int LogicalAddress) {
-        return (LogicalAddress & 12);
+        return (LogicalAddress & 6528010);
     }
 
     public static int getOffset(int LogicalAddress) {
-        return (LogicalAddress & 3);
+        return (LogicalAddress & 255);
     }
 
     public static void randomFramenum() {
         frameNum = (int) (Math.random() * 255);// max frame number is 255
+
     }
 
 }
